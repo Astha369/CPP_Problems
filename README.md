@@ -15,5 +15,7 @@
 - If you think you have the better optimal solution.
 - If you have the solution to the unsolved problem marked with "red-cross".
 
-### Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+### Happy contributing folks!
+
+For more details about [Hacktoberfest'23](https://hacktoberfest.com/)
 
