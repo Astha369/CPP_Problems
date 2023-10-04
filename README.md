@@ -1,21 +1,25 @@
 # Practice_CPP
 
-**_If you appreciate my work, please 🌟 this repository. It motivates me. :rocket: :rocket:_**
+<h1>HACKTOBERFEST 2023</h1>
+<p>Hacktoberfest, a celebration of open-source contributions, is back for its 10th year. This year, developers are encouraged to tackle project issues and requests, making it a great time to learn and contribute.</p>
+<br> <p>This is my first time being a maintainer of the repository in this Open-Source event. The repository is a simple compilation of CPP codes of various problems, feel free to contribute to it.</p>
 
-#### :red_circle: :red_circle: IMPORTANT : If you forked this repo and want to be updated with the changes made to this repo refer [How do I update a GitHub forked repository?](https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository)
+<br>
+<h3>First Time Contributing?</h3>
+<br>No worries, here is the guide.<br>
+<ol>
+  <li>Start by registering on the ![Hactoberfest](https://hacktoberfest.com/auth/) site using GitHub.</li>
+  <li>Once done with this step, fork this repository into your profile.</li>
+  <li>Clone the folder to your system, using either "Download Zip Folder" or "Clone using the link".</li>
+  <li>Add your cpp code along with a small comment describing the problem.</li>
+  <li>Commit the changes to the branch.</li>
+  <li>Create a pull request of the commit.</li>
+  <li>Wait for some time to get your changes merged and a few more minutes for the changes to be reflected on your Hacktoberfest profile.</li>
+  <li>Once the timer starts in your profile, It will take 7 days for the PR to be accepted in the Fest!</li>
+</ol>
 
-### :arrow_forward: Update Corner
+Once the timer ends and the PR is successfully accepted, you can go for your digital swags. 
+Visit the site to learn more about the swags and the updates.
 
-- Added **Clone A Graph** problem in the [Graphs](#graphs) topic.
-
-# :gift: You Can Contribute.
-
-#### Make a pull request :
-
-- If you think you have the better optimal solution.
-- If you have the solution to the unsolved problem marked with "red-cross".
-
-### Happy contributing folks!
-
-For more details about [Hacktoberfest'23](https://hacktoberfest.com/)
-
+<br> 
+<H1>HAPPY CONTRIBUTING!😄</H1>
