@@ -8,7 +8,7 @@
 <h3>First Time Contributing?</h3>
 <br>No worries, here is the guide.<br>
 <ol>
-  <li>Start by registering on the ![Hactoberfest](https://hacktoberfest.com/auth/) site using GitHub.</li>
+  <li>Start by registering on the [Hactoberfest](https://hacktoberfest.com/auth/) site using GitHub.</li>
   <li>Once done with this step, fork this repository into your profile.</li>
   <li>Clone the folder to your system, using either "Download Zip Folder" or "Clone using the link".</li>
   <li>Add your cpp code along with a small comment describing the problem.</li>
