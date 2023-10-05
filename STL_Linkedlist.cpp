@@ -1,8 +1,9 @@
-#include <iostream> //Header File
-#include <bits/stdc++.h>
+#include <iostream>      //Header File
+#include <bits/stdc++.h> // standard template library
 using namespace std;
 int main()
 {
+
     // Start of the main function
     list<int> li;
     // Insertion (at end)
