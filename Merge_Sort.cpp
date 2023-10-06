@@ -1,88 +1,46 @@
-// C++ program for Merge Sort
-#include <bits/stdc++.h>
-using namespace std;
+// C++ implementation of Shell Sort 
+#include <iostream> 
+using namespace std; 
 
-void merge(int array[], int const left, int const mid,
-		int const right)
-{
-	int const subArrayOne = mid - left + 1;
-	int const subArrayTwo = right - mid;
+/* function to sort arr using shellSort */
+int shellSort(int arr[], int n) 
+{ 
 
-	auto *leftArray = new int[subArrayOne],
-		*rightArray = new int[subArrayTwo];
+	for (int gap = n/2; gap > 0; gap /= 2) 
+	{ 
+		
+		for (int i = gap; i < n; i += 1) 
+		{  
+			int temp = arr[i]; 
 
-	for (auto i = 0; i < subArrayOne; i++)
-		leftArray[i] = array[left + i];
-	for (auto j = 0; j < subArrayTwo; j++)
-		rightArray[j] = array[mid + 1 + j];
+			int j;			 
+			for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) 
+				arr[j] = arr[j - gap]; 
+			
+			arr[j] = temp; 
+		} 
+	} 
+	return 0; 
+} 
 
-	auto indexOfSubArrayOne = 0, indexOfSubArrayTwo = 0;
-	int indexOfMergedArray = left;
+void printArray(int arr[], int n) 
+{ 
+	for (int i=0; i<n; i++) 
+		cout << arr[i] << " "; 
+} 
 
+int main() 
+{ 
+	int arr[] = {12, 34, 54, 2, 3}, i; 
+	int n = sizeof(arr)/sizeof(arr[0]); 
 
-	while (indexOfSubArrayOne < subArrayOne
-		&& indexOfSubArrayTwo < subArrayTwo) {
-		if (leftArray[indexOfSubArrayOne]
-			<= rightArray[indexOfSubArrayTwo]) {
-			array[indexOfMergedArray]
-				= leftArray[indexOfSubArrayOne];
-			indexOfSubArrayOne++;
-		}
-		else {
-			array[indexOfMergedArray]
-				= rightArray[indexOfSubArrayTwo];
-			indexOfSubArrayTwo++;
-		}
-		indexOfMergedArray++;
-	}
+	cout << "Array before sorting: \n"; 
+	printArray(arr, n); 
 
-	while (indexOfSubArrayOne < subArrayOne) {
-		array[indexOfMergedArray]
-			= leftArray[indexOfSubArrayOne];
-		indexOfSubArrayOne++;
-		indexOfMergedArray++;
-	}
+	shellSort(arr, n); 
 
-	while (indexOfSubArrayTwo < subArrayTwo) {
-		array[indexOfMergedArray]
-			= rightArray[indexOfSubArrayTwo];
-		indexOfSubArrayTwo++;
-		indexOfMergedArray++;
-	}
-	delete[] leftArray;
-	delete[] rightArray;
-}
-void mergeSort(int array[], int const begin, int const end)
-{
-	if (begin >= end)
-		return;
+	cout << "\nArray after sorting: \n"; 
+	printArray(arr, n); 
 
-	int mid = begin + (end - begin) / 2;
-	mergeSort(array, begin, mid);
-	mergeSort(array, mid + 1, end);
-	merge(array, begin, mid, end);
-}
-
-void printArray(int A[], int size)
-{
-	for (int i = 0; i < size; i++)
-		cout << A[i] << " ";
-	cout << endl;
-}
-
-// Driver code
-int main()
-{
-	int arr[] = { 12, 11, 13, 5, 6, 7 };
-	int arr_size = sizeof(arr) / sizeof(arr[0]);
-
-	cout << "Given array is \n";
-	printArray(arr, arr_size);
-
-	mergeSort(arr, 0, arr_size - 1);
-
-	cout << "\nSorted array is \n";
-	printArray(arr, arr_size);
-	return 0;
-}
-
+	return 0; 
+} 
