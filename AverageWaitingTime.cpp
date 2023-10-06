@@ -29,7 +29,6 @@ int main(){
     cout<<"enter number of customer : ";
     cin>>n;
     int arr[2][n];
-
     for(int i=0; i<n; i++){
         cin>>arr[0][i]>>arr[1][i];
     }
