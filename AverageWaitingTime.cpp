@@ -19,19 +19,29 @@ Constraints:
  
 */
 
-class Solution {
-public:
-    double averageWaitingTime(vector<vector<int>>& customers) {
-        int n = customers.size();
-        int t = customers[0][0] + customers[0][1];
-        double waitingTime = (double)t - (double)customers[0][0];
-        for(int i = 1; i<n; i++) {
-            if(t<customers[i][0]) {
-                t = customers[i][0];
-            }
-            t += customers[i][1];
-            waitingTime += (double)(t-customers[i][0]);
-        }
-        return waitingTime/(double)n;
+
+// Solution= according to me we will find the time that each customer have to wait and add them up, and to find the average divide it by total no. of customers
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"enter number of customer : ";
+    cin>>n;
+    int arr[2][n];
+    for(int i=0; i<n; i++){
+        cin>>arr[0][i]>>arr[1][i];
     }
-};
+
+    int custtime[n];
+    for(int i=0; i<n; i++){
+        custtime[i]= arr[1][i]-arr[0][i];
+    }
+    int sumtime= 0;
+    for(int i=0; i<n; i++){
+        sumtime+= custtime[i];
+    }
+
+    int final= sumtime/n;
+    cout<<final<<endl;
+}

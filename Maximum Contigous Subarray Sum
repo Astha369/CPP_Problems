@@ -1,0 +1,32 @@
+// We have been given an array of integers, and we need to find the sum of a
+// contigous subarray which has the maximum sum as compared to all the other
+// contigous subarrays. (Kadane's Algorithm)
+
+#include <iostream>
+#include <climits>
+using namespace std;
+
+int findMaximumSubarraySum(int array[], int size)
+{
+    int maxSumSoFar = INT_MIN, maxEndingHere = 0;
+
+    for (int i = 0; i < size; i++) {
+        maxEndingHere = maxEndingHere + array[i];
+        if (maxSumSoFar < maxEndingHere)
+            maxSumSoFar = maxEndingHere;
+
+        if (maxEndingHere < 0)
+            maxEndingHere = 0;
+    }
+    return maxSumSoFar;
+}
+
+int main()
+{
+    int inputArray[] = { -5, 4, 2, 1, -7, 9, 1, -5, -2 };
+    int arraySize = sizeof(inputArray) / sizeof(inputArray[0]);
+
+    int maxSum = findMaximumSubarraySum(inputArray, arraySize);
+    cout << "Maximum sum is " << maxSum;
+    return 0;
+}
