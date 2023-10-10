@@ -1,0 +1,26 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+bool isMonotonic(vector<int>& nums) {
+    bool flag1 = true, flag2 = true;
+    for(int i=1;i<nums.size();i++){
+        if(nums[i]>nums[i-1]) flag1 = false;
+        if(nums[i]<nums[i-1]) flag2 = false;
+    }
+    if(flag1 == false and flag2 == false) return false;
+    return true;
+}
+int main(){
+    int n;
+    cout<<"Enter size of array: ";
+    cin>>n;
+    vector<int> arr(n);
+    cout<<"Enter the elements of array: \n";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    bool ans = isMonotonic(arr);
+    if(ans) cout<<"true";
+    else cout<<"false";
+    
+}
