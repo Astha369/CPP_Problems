@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter an integer: ";
+    cin>>n;
+    cout<<"Before reversing the integer: "<<n<<endl;
+    int ans = 0;
+    while(n!=0){
+        int rem = n%10;
+        ans = ans*10 + rem;
+        n = n/10;
+    }
+    cout<<"After reversing the integer: "<<ans;
+}
