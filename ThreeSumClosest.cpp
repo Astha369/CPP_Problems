@@ -12,10 +12,10 @@ public:
         int n= nums.size();
         sort(nums.begin(),nums.end());
         for(int i=0;i<n;i++){
-           int a = i+1;
-           int b = n-1;
-           while(a<b){
-               sum = nums[i]+nums[a]+nums[b];
+           int pointer1 = i+1;
+           int pointer2 = n-1;
+           while(pointer1<pointer2){
+               sum = nums[i]+nums[pointer1]+nums[pointer2];
                int k = abs(sum-target);
                if(k<diff){
                    diff = k;
@@ -23,9 +23,9 @@ public:
                }if(sum == target)
                     return target;
                 else if(sum<target)
-                   a++;
+                   pointer1++;
                 else
-                   b--;
+                   pointer2--;
            }
         }
         return result; 
