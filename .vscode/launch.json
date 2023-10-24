@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Manee/New folder/CPP_Problems",
-      "program": "c:/Users/Manee/New folder/CPP_Problems/build/Debug/outDebug",
+      "cwd": "c:/Users/91879/OneDrive/Documents/GitHub/CPP_Problems",
+      "program": "c:/Users/91879/OneDrive/Documents/GitHub/CPP_Problems/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
